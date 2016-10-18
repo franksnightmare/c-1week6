@@ -51,11 +51,17 @@ Remco Bos \\
 
 \maketitle
 
+\section*{Exercise 50, creating a `one-size-fits-all' function}
+
+The exercise gives a main function that won't compile because it lacks a function declaration. The declaration must allow for different types and number of arguments and is added in the following source.
+
+\lstinputlisting[caption = variadic.cc]{a50.cc}
+
 \section*{Exercise 51, understanding the behaviour of istreams}
 
 A piece of code is presented which is expected to take and output two numerical unsigned inputs, but outputs 0 instead of the second value. The reason for this is that the stream's data hasn't been activated by a seek operation after receiving the value by the $<$$<$ operator. The fix for this behaviour is added to the code.
 
-\lstinputlisting[caption = code repair in line 3]{a51.cc}
+\lstinputlisting[caption = Code repair in line 3]{a51.cc}
 
 \section*{Exercise 52, defining a manipulator}
 
