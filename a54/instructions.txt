@@ -1,0 +1,2 @@
+run as "./main pacct" to run the pacct file.
+you can use -a to print all processes
