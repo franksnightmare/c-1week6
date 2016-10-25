@@ -18,7 +18,6 @@ void arguments(Vars &vars, int argc, char **argv)
 			default:
 				cerr << "Invalid option " << opt << '\n';
 				return;
-			break;
 		}
 	}
 	

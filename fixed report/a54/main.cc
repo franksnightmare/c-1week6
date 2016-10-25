@@ -4,5 +4,5 @@ int main(int argc, char **argv)
 {
 	Vars vars;
 	arguments(vars, argc, argv);
-	process(vars);
+	process(vars, std::cout);
 }

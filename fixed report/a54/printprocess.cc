@@ -1,19 +1,19 @@
 #include "main.ih"
 
-void printProcess(char *name, size_t exitCode)
+void printProcess(ostream &output, char *name, size_t exitCode)
 {
-	cout << '\'' << name << "\' ";
+	output << '\'' << name << "\' ";
 	switch(exitCode)
 	{
 		case(SIGKILL):
-			cout << "KILL";
+			output << "KILL";
 		break;
 		case(SIGTERM):
-			cout << "TERM";
+			output << "TERM";
 		break;
 		default:
-			cout << exitCode;
+			output << exitCode;
 		break;
 	}
-	cout << '\n';
+	output << '\n';
 }
