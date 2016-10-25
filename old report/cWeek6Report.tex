@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+
+\usepackage{a4wide,times}
+\usepackage[english]{babel}
+
+% -----------------------------------------------
+% especially use this for you code
+% -----------------------------------------------
+
+\usepackage{courier}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+
+\definecolor{Gray}{gray}{0.95}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{language=C++,
+	basicstyle = \normalsize\ttfamily,   % the size and fonts that are used
+	tabsize = 2,                    % sets default tabsize
+	breaklines = true,              % sets automatic line breaking
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{mygreen}\ttfamily,
+	numbers=left,
+	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,
+}
+
+\lstdefinestyle{bigtabs}
+{
+	basicstyle = \normalsize\ttfamily,
+	tasize = 8;
+}
+
+\begin{document}
+
+\title{Programming in C/C++ \\
+       Exercises set six: Basic Input/Output
+}
+\date{\today}
+\author{Christiaan Steenkist \\
+Diego Ribas Gomes \\
+Jaime Betancor Valado \\
+Remco Bos \\
+}
+
+\maketitle
+
+\section*{Exercise 50, creating a `one-size-fits-all' function}
+
+The exercise gives a main function that won't compile because it lacks a function declaration. The declaration must allow for different types and number of arguments and is added in the following source.
+
+\lstinputlisting[caption = variadic.cc]{a50.cc}
+
+\section*{Exercise 51, understanding the behaviour of istreams}
+
+A piece of code is presented which is expected to take and output two numerical unsigned inputs, but outputs 0 instead of the second value. The reason for this is that the stream's data hasn't been activated by a seek operation after receiving the value by the $<$$<$ operator. The fix for this behaviour is added to the code.
+
+\lstinputlisting[caption = Code repair in line 3]{a51.cc}
+
+\section*{Exercise 52, defining a manipulator}
+
+A manipulator is implemented to insert the current date and time as produced by asctime but without the trailing newline it automatically appends.
+
+\lstinputlisting[caption = nowManip.cc]{a52.cc}
+
+\section*{Exercise 53, displaying floating point numbers using modifiers}
+
+A program is built that defines a double variable and displays it in different requested formats using a single cout statement.
+
+\lstinputlisting[caption = floatModif.cc]{a53.cc}
+
+\section*{Exercise 54, using binary files}
+
+A program is built reading by default the binary file /var/log/account/pacct or another specified command-line argument and outputs the names of all processes that didn't exit properly. The inclusion of a '-a' option should make it output information about all exited processes and if a process was killed with SIGKILL or SIGTERM, it should mention the name of the signal instead of the number.
+
+\lstinputlisting[caption = main.cc]{a54/main.cc}
+\lstinputlisting[caption = main.h]{a54/main.h}
+\lstinputlisting[caption = main.ih]{a54/main.ih}
+\lstinputlisting[caption = arguments.cc]{a54/arguments.cc}
+\lstinputlisting[caption = process.cc]{a54/process.cc}
+\lstinputlisting[caption = printProcess.cc]{a54/printprocess.cc}
+
+\end{document}
