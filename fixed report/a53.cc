@@ -11,7 +11,7 @@ int main()
     << setw(15) << value << "\n" 
     << setw(15) << left << value << "\n"
     << setw(15) << right << value << "\n"
-    << setw(15) << fixed << setprecision(1) << value << "\n"
-    << setw(15) << setprecision(4) << value << "\n"
+    << setw(15) << setprecision(3) << showpoint << value << "\n"
+    << setw(15) << setprecision(4) << fixed << value << "\n"
     << resetiosflags(ios::fixed) << setw(15) << value << "\n";
 }
