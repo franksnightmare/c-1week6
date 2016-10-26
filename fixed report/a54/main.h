@@ -16,6 +16,7 @@ struct Vars
 
 void arguments(Vars &vars, int argc, char **argv);
 void process(Vars &vars, std::ostream &output);
-void printProcess(std::ostream &output, char *name, size_t exitCode);
+void printProcess(std::ostream &output, char *name,
+	size_t exitCode);
 
 #endif

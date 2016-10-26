@@ -22,7 +22,8 @@ void process(Vars &vars, ostream &output)
 	is.seekg(0, is.beg);	
 	
 	// The reading process reads acct_v3 structs from the file.
-	// It then reads the important information directly from the struct.
+	// It then reads the important information directly
+	// from the struct.
 	acct_v3 log;
 	
 	size_t process = 0;

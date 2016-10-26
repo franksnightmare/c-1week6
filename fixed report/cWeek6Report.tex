@@ -61,17 +61,17 @@ The exercise gives a main function that won't compile because it lacks a functio
 
 A piece of code is presented which is expected to take and output two numerical unsigned inputs, but outputs 0 instead of the second value. The reason for this is that the stream's data hasn't been activated by a seek operation after receiving the value by the $<$$<$ operator. The fix for this behaviour is added to the code.
 
-\lstinputlisting[caption = Code repair in line 3]{a51.cc}
+\lstinputlisting[caption = Fix is on line 21]{a51.cc}
 
 \section*{Exercise 52, defining a manipulator}
 
-A manipulator is implemented to insert the current date and time as produced by asctime but without the trailing newline it automatically appends.
+A manipulator is implemented to insert the current date and time as produced by \texttt{asctime} but without the trailing newline it automatically appends.
 
-\lstinputlisting[caption = nowManip.cc]{a52.cc}
+\lstinputlisting[caption = nowManip.cc]{a52fixed.cc}
 
 \section*{Exercise 53, displaying floating point numbers using modifiers}
 
-A program is built that defines a double variable and displays it in different requested formats using a single cout statement.
+A program is built that defines a double variable and displays it in different requested formats using a single \texttt{cout} statement.
 
 \lstinputlisting[caption = floatModif.cc]{a53.cc}
 
